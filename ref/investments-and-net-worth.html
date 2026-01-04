@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Investments &amp; Net Worth</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        // Using a teal-greenish primary as seen in the graph and 'plus' button
+                        primary: "#3DE0C4", 
+                        // Very light gray for light mode background
+                        "background-light": "#F3F4F6", 
+                        // Deep dark blue-black for dark mode background (sampled from screenshot)
+                        "background-dark": "#0F1115", 
+                        // Surface colors
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#181B21",
+                        "surface-darker": "#131519",
+                        // Accent colors from screenshot
+                        "accent-purple": "#8B5CF6",
+                        "accent-blue": "#3B82F6",
+                        "accent-pink": "#EC4899",
+                        "accent-orange": "#F97316",
+                        "accent-red": "#EF4444",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        "xl": "1.25rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem",
+                    },
+                    boxShadow: {
+                        'glow': '0 0 15px rgba(61, 224, 196, 0.3)',
+                        'glow-purple': '0 0 15px rgba(139, 92, 246, 0.2)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>.scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }.text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }.glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 font-sans min-h-screen transition-colors duration-300 antialiased overflow-x-hidden pb-24">
+<header class="px-6 pt-8 pb-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-indigo-100 dark:bg-gray-800 overflow-hidden border-2 border-primary">
+<img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf_eNHtxIoZR4tdO73RXuxnuktPoEnofXWxyrp-sUFNvf8ehMVzNW4B3as0Ungzs6jL00OFE1YbnRLiX68MZT5J4bM6IyQGO5zYrPDCPFKUyC5qM-XpIMYq7QuWZhs9pCtH7-uhSk5M5CzVjLa5xArnDcOxbgkfWr8foVybgA0R9ZRUBc7J7dJywfDeOaq37bAkpLdaVHvqH6cOHksNO4IREaltdraonVn-BdtxBCj3WvBgZgFqeEsQQt-a1fFGMOxvRJlF1md0w"/>
+</div>
+<div>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Welcome back</p>
+<h1 class="text-lg font-bold tracking-tight">Investments</h1>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full bg-white dark:bg-surface-dark flex items-center justify-center text-gray-600 dark:text-gray-400 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+<span class="material-icons-round text-xl">notifications_none</span>
+</button>
+</header>
+<main class="px-4 space-y-6">
+<section class="bg-white dark:bg-surface-dark rounded-3xl p-6 shadow-lg dark:shadow-none border border-gray-100 dark:border-gray-800 relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary opacity-5 rounded-full blur-3xl"></div>
+<div class="flex justify-between items-start mb-2 relative z-10">
+<div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Total Net Worth</p>
+<h2 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">$142,850<span class="text-xl text-gray-400 dark:text-gray-500 font-normal">.00</span></h2>
+</div>
+<div class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-bold rounded-full flex items-center gap-1">
+<span class="material-icons-round text-sm">trending_up</span>
+                    +12.4%
+                </div>
+</div>
+<p class="text-xs text-gray-400 dark:text-gray-500 mb-6 relative z-10">Investment Growth (Last 6 Months)</p>
+<div class="h-40 w-full relative">
+<div class="absolute inset-0 flex flex-col justify-between text-xs text-gray-300 dark:text-gray-700 pointer-events-none">
+<div class="border-b border-dashed border-gray-200 dark:border-gray-800 w-full h-px"></div>
+<div class="border-b border-dashed border-gray-200 dark:border-gray-800 w-full h-px"></div>
+<div class="border-b border-dashed border-gray-200 dark:border-gray-800 w-full h-px"></div>
+<div class="border-b border-dashed border-gray-200 dark:border-gray-800 w-full h-px"></div>
+</div>
+<svg class="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 100 50">
+<defs>
+<linearGradient id="gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#3DE0C4; stop-opacity:0.3"></stop>
+<stop offset="100%" style="stop-color:#3DE0C4; stop-opacity:0"></stop>
+</linearGradient>
+</defs>
+<path d="M0 45 C 20 40, 40 38, 50 35 C 60 32, 70 20, 100 10" fill="url(#gradient)" stroke="none"></path>
+<path d="M0 45 C 20 40, 40 38, 50 35 C 60 32, 70 20, 100 10" fill="none" stroke="#3DE0C4" stroke-linecap="round" stroke-width="2"></path>
+<circle cx="50" cy="35" fill="#181B21" r="2" stroke="#3DE0C4" stroke-width="1.5"></circle>
+<circle cx="100" cy="10" fill="#181B21" r="2" stroke="#3DE0C4" stroke-width="1.5"></circle>
+</svg>
+</div>
+<div class="flex justify-between text-[10px] text-gray-400 dark:text-gray-500 mt-2 uppercase font-medium tracking-wide">
+<span>Jan</span>
+<span>Feb</span>
+<span>Mar</span>
+<span>Apr</span>
+<span>May</span>
+<span>Jun</span>
+</div>
+<div class="flex gap-4 mt-4 justify-start">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-[10px] text-gray-500 dark:text-gray-400">Assets: $185k</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-accent-pink"></span>
+<span class="text-[10px] text-gray-500 dark:text-gray-400">Liabilities: $42k</span>
+</div>
+</div>
+</section>
+<section>
+<h3 class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-3 ml-1">Add Assets</h3>
+<div class="flex gap-3 overflow-x-auto scrollbar-hide pb-2">
+<div class="min-w-[100px] bg-white dark:bg-surface-dark p-4 rounded-2xl flex flex-col items-center justify-center gap-2 border border-gray-100 dark:border-gray-800 active:scale-95 transition-transform">
+<div class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-accent-blue">
+<span class="material-icons-round text-lg">bar_chart</span>
+</div>
+<span class="text-xs font-medium text-gray-600 dark:text-gray-300">Stocks</span>
+</div>
+<div class="min-w-[100px] bg-white dark:bg-surface-dark p-4 rounded-2xl flex flex-col items-center justify-center gap-2 border border-gray-100 dark:border-gray-800 active:scale-95 transition-transform">
+<div class="w-10 h-10 rounded-full bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-accent-purple">
+<span class="material-icons-round text-lg">pie_chart</span>
+</div>
+<span class="text-xs font-medium text-gray-600 dark:text-gray-300">Mutual Fund</span>
+</div>
+<div class="min-w-[100px] bg-white dark:bg-surface-dark p-4 rounded-2xl flex flex-col items-center justify-center gap-2 border border-gray-100 dark:border-gray-800 active:scale-95 transition-transform">
+<div class="w-10 h-10 rounded-full bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center text-accent-orange">
+<span class="material-icons-round text-lg">savings</span>
+</div>
+<span class="text-xs font-medium text-gray-600 dark:text-gray-300">FD / EPF</span>
+</div>
+<div class="min-w-[20px]"></div>
+</div>
+</section>
+<div class="grid grid-cols-1 gap-4">
+<section class="bg-white dark:bg-surface-dark rounded-3xl p-5 border border-gray-100 dark:border-gray-800">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-sm font-semibold text-gray-400 dark:text-gray-400 uppercase tracking-wide">Asset Allocation</h3>
+<button class="text-xs text-primary hover:text-primary/80">Analysis</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="relative w-28 h-28 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+<path class="text-gray-100 dark:text-gray-800" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4.5"></path>
+<path class="text-accent-blue" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="45, 100" stroke-width="4.5"></path>
+<path class="text-accent-purple" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="30, 100" stroke-dashoffset="-45" stroke-width="4.5"></path>
+<path class="text-accent-pink" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="15, 100" stroke-dashoffset="-75" stroke-width="4.5"></path>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="text-[10px] text-gray-400">TOTAL</span>
+<span class="text-xs font-bold dark:text-white">100%</span>
+</div>
+</div>
+<div class="space-y-2 flex-1 pl-6">
+<div class="flex justify-between items-center text-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-accent-blue"></span>
+<span class="text-gray-600 dark:text-gray-300">Stocks</span>
+</div>
+<span class="font-semibold dark:text-white">45%</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-accent-purple"></span>
+<span class="text-gray-600 dark:text-gray-300">Mutual Funds</span>
+</div>
+<span class="font-semibold dark:text-white">30%</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-accent-pink"></span>
+<span class="text-gray-600 dark:text-gray-300">EPF &amp; RE</span>
+</div>
+<span class="font-semibold dark:text-white">15%</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-gray-600 dark:text-gray-300">Cash/Liquid</span>
+</div>
+<span class="font-semibold dark:text-white">10%</span>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-gradient-to-br from-[#1E2129] to-[#131519] dark:from-[#1E2129] dark:to-[#131519] bg-gray-900 rounded-3xl p-5 border border-indigo-500/30 shadow-glow-purple relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent-purple opacity-10 blur-2xl rounded-full"></div>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-icons-round text-accent-purple text-lg">auto_awesome</span>
+<h3 class="text-sm font-bold text-accent-purple uppercase tracking-wider">AI Insight</h3>
+</div>
+<p class="text-sm text-gray-300 leading-relaxed mb-4">
+                    Your portfolio is slightly heavy on debt instruments (45%). Considering your age, increasing equity exposure via SIPs could potentially boost long-term growth by <span class="text-green-400 font-bold">~3-4%</span>.
+                </p>
+<button class="text-xs text-accent-blue font-medium flex items-center gap-1 hover:underline">
+                    Read detailed analysis <span class="material-icons-round text-sm">arrow_forward</span>
+</button>
+</section>
+</div>
+<section>
+<div class="flex justify-between items-end mb-3 px-1">
+<h3 class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider">Your Assets</h3>
+<button class="text-xs text-gray-400 dark:text-gray-600 hover:text-primary">See all</button>
+</div>
+<div class="space-y-3">
+<div class="bg-white dark:bg-surface-dark p-4 rounded-2xl flex items-center justify-between border border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-accent-blue">
+<span class="material-icons-round">show_chart</span>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 dark:text-gray-100">US Stocks</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400">Apple, Tesla, NVDA</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-gray-900 dark:text-white">$42,500</p>
+<p class="text-xs text-green-500 flex items-center justify-end gap-0.5">
+<span class="material-icons-round text-[10px]">north</span> 2.1%
+                        </p>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark p-4 rounded-2xl flex items-center justify-between border border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-accent-purple">
+<span class="material-icons-round">account_balance</span>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 dark:text-gray-100">Mutual Funds (SIP)</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400">Monthly Auto-debit</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-gray-900 dark:text-white">$28,300</p>
+<p class="text-xs text-green-500 flex items-center justify-end gap-0.5">
+<span class="material-icons-round text-[10px]">north</span> 5.4%
+                        </p>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark p-4 rounded-2xl flex items-center justify-between border border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center text-accent-orange">
+<span class="material-icons-round">lock_clock</span>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 dark:text-gray-100">Provident Fund (EPF)</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400">Retirement Corpus</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-gray-900 dark:text-white">$15,200</p>
+<p class="text-xs text-gray-500 dark:text-gray-500">Fixed</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h3 class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-3 px-1">Liabilities</h3>
+<div class="bg-white dark:bg-surface-dark p-4 rounded-2xl flex items-center justify-between border border-gray-100 dark:border-gray-800 relative overflow-hidden group">
+<div class="absolute left-0 top-2 bottom-2 w-1 bg-accent-red rounded-r-full"></div>
+<div class="flex items-center gap-4 pl-2">
+<div class="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center text-accent-red">
+<span class="material-icons-round">home</span>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 dark:text-gray-100">Home Loan EMI</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400">Next due: 5th Aug</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-gray-900 dark:text-white">-$1,240</p>
+<p class="text-xs text-accent-red">Monthly</p>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-6 left-4 right-4 bg-surface-darker/90 dark:bg-surface-darker/90 glass-nav p-2 rounded-[2rem] border border-gray-800 shadow-2xl z-50">
+<div class="flex items-center justify-between px-4 relative">
+<button class="p-3 text-gray-500 hover:text-white transition-colors">
+<span class="material-icons-round">home</span>
+</button>
+<button class="p-3 text-primary bg-primary/10 rounded-xl transition-colors">
+<span class="material-icons-round">account_balance_wallet</span>
+</button>
+<button class="relative -top-6 bg-primary hover:bg-teal-400 text-surface-darker rounded-full w-14 h-14 flex items-center justify-center shadow-glow transition-all active:scale-95">
+<span class="material-icons-round text-2xl font-bold">add</span>
+</button>
+<button class="p-3 text-gray-500 hover:text-white transition-colors">
+<span class="material-icons-round">school</span>
+</button>
+<button class="p-3 text-gray-500 hover:text-white transition-colors">
+<span class="material-icons-round">person</span>
+</button>
+</div>
+</nav>
+<div class="fixed top-4 right-4 z-50">
+<button class="bg-gray-200 dark:bg-gray-800 p-2 rounded-full shadow-lg" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-round text-gray-800 dark:text-white text-sm">brightness_4</span>
+</button>
+</div>
+<script>
+        document.documentElement.classList.add('dark');
+    </script>
+
+</body></html>

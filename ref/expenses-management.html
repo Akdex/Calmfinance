@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Expenses Management</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        @layer base {
+            :root {
+                --bg-primary: #121214; 
+                --bg-card: #1E1E22;
+                --bg-card-hover: #2C2C30;
+                --text-primary: #FFFFFF;
+                --text-secondary: #A1A1AA;
+                --text-accent: #71717A;
+                --brand-blue: #6366F1;
+                --brand-blue-dark: #4F46E5;
+                --brand-blue-soft: rgba(99, 102, 241, 0.15);
+                --border-color: #27272A;
+                --shadow-light: 0px 4px 12px rgba(0, 0, 0, 0.3);
+                --shadow-medium: 0px 12px 24px rgba(0, 0, 0, 0.4);
+                --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }.no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] font-sans flex flex-col min-h-screen selection:bg-[var(--brand-blue)] selection:text-white">
+<div class="fixed top-0 w-full z-50 bg-[var(--bg-primary)]/90 backdrop-blur-md border-b border-[var(--border-color)]/50">
+<div class="flex justify-between items-center text-xs font-medium px-6 py-2 max-w-md mx-auto w-full text-[var(--text-secondary)]">
+<span>9:41</span>
+<div class="flex space-x-1">
+<span class="material-symbols-outlined text-sm">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-sm">wifi</span>
+<span class="material-symbols-outlined text-sm">battery_full</span>
+</div>
+</div>
+</div>
+<div class="flex-grow flex flex-col pt-16 pb-0 max-w-md mx-auto w-full relative">
+<header class="px-6 mb-8 mt-4 flex justify-between items-end">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-md bg-[var(--brand-blue-soft)] text-[var(--brand-blue)] text-[0.65rem] font-bold uppercase tracking-wider">New Entry</span>
+</div>
+<h1 class="text-3xl font-bold tracking-tight text-white">Add Expense</h1>
+<p class="text-[var(--text-secondary)] text-sm mt-1 leading-relaxed max-w-[250px]">Let's detail this transaction step-by-step.</p>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] border border-[var(--border-color)] text-[var(--text-secondary)] transition-all duration-200 shadow-sm active:scale-95">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</header>
+<main class="flex-grow px-5 space-y-8 pb-32">
+<section class="p-6 md:p-8 bg-[var(--bg-card)] rounded-[2rem] shadow-[var(--shadow-light)] border border-[var(--border-color)] relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-[var(--brand-blue)] opacity-5 blur-[60px] rounded-full pointer-events-none"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-3">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--brand-blue)] text-white font-bold text-sm shadow-lg shadow-[var(--brand-blue)]/20">1</div>
+<h2 class="text-lg font-semibold text-white">Total Amount</h2>
+</div>
+<p class="text-[var(--text-secondary)] text-sm mb-6 pl-11 leading-relaxed">Enter the exact value shown on your receipt.</p>
+<div class="flex flex-col items-center bg-[var(--bg-primary)]/50 rounded-2xl p-6 border border-[var(--border-color)] shadow-[var(--shadow-inner)]">
+<div class="flex items-center justify-center w-full">
+<span class="text-3xl font-medium text-[var(--text-accent)] mr-2">$</span>
+<input class="w-full bg-transparent text-5xl font-bold text-center border-none p-0 focus:ring-0 text-white placeholder-[var(--text-accent)]/30 caret-[var(--brand-blue)]" inputmode="decimal" placeholder="0.00" type="text" value="48.50"/>
+</div>
+</div>
+<div class="mt-4 flex justify-center">
+<span class="text-xs text-[var(--text-accent)] bg-[var(--bg-card-hover)] px-3 py-1 rounded-full border border-[var(--border-color)]">USD - United States Dollar</span>
+</div>
+</div>
+</section>
+<section class="p-6 md:p-8 bg-[var(--bg-card)] rounded-[2rem] shadow-[var(--shadow-light)] border border-[var(--border-color)] relative">
+<div class="flex items-center gap-3 mb-3">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--bg-card-hover)] border border-[var(--border-color)] text-[var(--text-secondary)] font-bold text-sm">2</div>
+<h2 class="text-lg font-semibold text-white">Category</h2>
+</div>
+<p class="text-[var(--text-secondary)] text-sm mb-6 pl-11 leading-relaxed">What kind of purchase was this? Select the best match.</p>
+<div class="grid grid-cols-2 gap-4 pl-2">
+<button class="relative group flex flex-col items-center justify-center p-5 rounded-2xl bg-[var(--brand-blue)]/10 border-2 border-[var(--brand-blue)] text-[var(--text-primary)] transition-all duration-200 active:scale-[0.98]">
+<span class="material-symbols-outlined text-3xl mb-2 text-[var(--brand-blue)] group-hover:scale-110 transition-transform">restaurant</span>
+<span class="font-medium text-sm">Food &amp; Dining</span>
+<div class="absolute inset-0 rounded-2xl ring-4 ring-[var(--brand-blue)]/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</button>
+<button class="flex flex-col items-center justify-center p-5 rounded-2xl bg-[var(--bg-card-hover)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)]/80 transition-all duration-200 active:scale-[0.98]">
+<span class="material-symbols-outlined text-3xl mb-2 opacity-50">add_circle</span>
+<span class="font-medium text-sm">New Category</span>
+</button>
+</div>
+</section>
+<section class="p-6 md:p-8 bg-[var(--bg-card)] rounded-[2rem] shadow-[var(--shadow-light)] border border-[var(--border-color)] relative">
+<div class="flex items-center gap-3 mb-3">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--bg-card-hover)] border border-[var(--border-color)] text-[var(--text-secondary)] font-bold text-sm">3</div>
+<h2 class="text-lg font-semibold text-white">Date &amp; Time</h2>
+</div>
+<p class="text-[var(--text-secondary)] text-sm mb-6 pl-11 leading-relaxed">When did this transaction happen?</p>
+<button class="w-full flex items-center p-4 rounded-2xl bg-[var(--bg-card-hover)] border border-[var(--border-color)] hover:border-[var(--text-accent)] transition-all duration-200 group">
+<div class="w-12 h-12 rounded-xl bg-[var(--bg-primary)] flex items-center justify-center text-[var(--brand-blue)] mr-4 shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">calendar_today</span>
+</div>
+<div class="text-left">
+<span class="block text-white font-medium text-lg">Today, Oct 24</span>
+<span class="block text-xs text-[var(--text-secondary)]">Tap to change date</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-[var(--text-accent)]">chevron_right</span>
+</button>
+</section>
+<section class="p-6 md:p-8 bg-[var(--bg-card)] rounded-[2rem] shadow-[var(--shadow-light)] border border-[var(--border-color)] relative">
+<div class="flex items-center gap-3 mb-3">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--bg-card-hover)] border border-[var(--border-color)] text-[var(--text-secondary)] font-bold text-sm">4</div>
+<h2 class="text-lg font-semibold text-white">Payment Mode</h2>
+</div>
+<p class="text-[var(--text-secondary)] text-sm mb-6 pl-11 leading-relaxed">Which wallet or card did you use to pay?</p>
+<div class="space-y-3 pl-2">
+<label class="flex items-center p-4 rounded-2xl bg-[var(--brand-blue)]/10 border border-[var(--brand-blue)] cursor-pointer transition-all">
+<input checked="" class="w-5 h-5 text-[var(--brand-blue)] border-gray-600 bg-transparent focus:ring-[var(--brand-blue)] focus:ring-offset-0" name="payment" type="radio"/>
+<div class="ml-4 flex items-center flex-1">
+<span class="material-symbols-outlined mr-3 text-[var(--brand-blue)]">credit_card</span>
+<div>
+<span class="block text-white font-medium text-sm">Amex ••9012</span>
+<span class="block text-[10px] text-[var(--brand-blue)] font-medium tracking-wide uppercase">Primary Card</span>
+</div>
+</div>
+</label>
+<label class="flex items-center p-4 rounded-2xl bg-[var(--bg-card-hover)] border border-[var(--border-color)] cursor-pointer hover:bg-[var(--bg-card-hover)]/80 transition-all">
+<input class="w-5 h-5 text-[var(--text-secondary)] border-gray-600 bg-transparent focus:ring-offset-0 focus:ring-0" name="payment" type="radio"/>
+<div class="ml-4 flex items-center flex-1 opacity-70">
+<span class="material-symbols-outlined mr-3">payments</span>
+<span class="block text-white font-medium text-sm">Cash</span>
+</div>
+</label>
+</div>
+</section>
+<section class="p-6 md:p-8 bg-[var(--bg-card)] rounded-[2rem] shadow-[var(--shadow-light)] border border-[var(--border-color)] relative">
+<div class="flex items-center gap-3 mb-3">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--bg-card-hover)] border border-[var(--border-color)] text-[var(--text-secondary)] font-bold text-sm">
+<span class="material-symbols-outlined text-sm">edit</span>
+</div>
+<h2 class="text-lg font-semibold text-white">Notes (Optional)</h2>
+</div>
+<p class="text-[var(--text-secondary)] text-sm mb-6 pl-11 leading-relaxed">Add any extra details or photos for future reference.</p>
+<button class="w-full flex items-center justify-center p-4 rounded-2xl border border-dashed border-[var(--text-secondary)] text-[var(--text-secondary)] hover:text-white hover:border-white hover:bg-[var(--bg-card-hover)] transition-all duration-300">
+<span class="material-symbols-outlined mr-2">add_photo_alternate</span>
+<span class="font-medium">Add Note or Receipt</span>
+</button>
+</section>
+</main>
+<div class="fixed bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-[var(--bg-primary)] via-[var(--bg-primary)] to-transparent z-40 max-w-md mx-auto">
+<div class="flex gap-4">
+<button class="flex-1 py-4 rounded-full bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-primary)] font-semibold shadow-lg hover:bg-[var(--bg-card-hover)] transition-all duration-200">
+                Save &amp; New
+            </button>
+<button class="flex-[1.5] py-4 rounded-full bg-[var(--brand-blue)] hover:bg-[var(--brand-blue-dark)] text-white font-semibold shadow-[var(--shadow-medium)] shadow-[var(--brand-blue)]/30 transition-all duration-200 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">check</span>
+                Save Expense
+            </button>
+</div>
+<div class="w-32 h-1 bg-[var(--text-secondary)]/20 rounded-full mx-auto mt-6"></div>
+</div>
+</div>
+
+</body></html>

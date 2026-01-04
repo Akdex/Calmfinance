@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EMIs &amp; Loans</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4B483", // A calm gold/beige color often used in high-end finance
+                        "background-light": "#F3F4F6",
+                        "background-dark": "#0F0F11",
+                        "surface-dark": "#1C1C1E",
+                        "surface-light": "#FFFFFF",
+                        "text-primary-dark": "#FFFFFF",
+                        "text-secondary-dark": "#A1A1AA",
+                        "text-primary-light": "#111827",
+                        "text-secondary-light": "#6B7280",
+                        "accent-blue": "#818CF8",
+                        "accent-green": "#34D399",
+                        "accent-purple": "#A78BFA",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1.5rem",
+                        xl: "1rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem",
+                    },
+                    boxShadow: {
+                        'soft-dark': '0 10px 40px -10px rgba(0,0,0,0.5)',
+                        'glow': '0 0 20px rgba(212, 180, 131, 0.15)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark min-h-screen antialiased selection:bg-primary selection:text-white transition-colors duration-300">
+<div class="max-w-md mx-auto min-h-screen relative overflow-hidden bg-background-light dark:bg-background-dark pb-24">
+<header class="pt-12 px-6 pb-6 flex justify-between items-center sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-icons-round text-2xl">arrow_back</span>
+</button>
+<h1 class="text-2xl font-semibold tracking-tight">EMIs &amp; Loans</h1>
+</div>
+<button class="p-2 rounded-full bg-surface-light dark:bg-surface-dark shadow-sm border border-gray-200 dark:border-white/10">
+<span class="material-icons-round text-primary">add</span>
+</button>
+</header>
+<main class="px-6 space-y-8 animate-fade-in-up">
+<section class="relative overflow-hidden rounded-3xl bg-surface-light dark:bg-surface-dark p-6 shadow-lg border border-gray-100 dark:border-white/5">
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/20 blur-3xl rounded-full pointer-events-none"></div>
+<div class="absolute -bottom-20 -left-20 w-48 h-48 bg-accent-blue/10 blur-3xl rounded-full pointer-events-none"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wider">Total Monthly EMI</p>
+<h2 class="text-4xl font-bold mt-1 text-primary">$2,450<span class="text-lg text-text-secondary-light dark:text-text-secondary-dark font-normal">.00</span></h2>
+</div>
+<div class="w-12 h-12 rounded-full bg-surface-light dark:bg-black/20 flex items-center justify-center ring-1 ring-white/10">
+<span class="material-icons-round text-accent-green">trending_down</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-text-secondary-light dark:text-text-secondary-dark">EMI to Income Ratio</span>
+<span class="text-accent-green">Healthy (28%)</span>
+</div>
+<div class="h-2 w-full bg-gray-200 dark:bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-accent-green w-[28%] rounded-full shadow-glow"></div>
+</div>
+<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark mt-2">
+                            Your debt-to-income ratio is healthy. You're utilizing 28% of your monthly income for debt repayment.
+                        </p>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-dashed border-gray-300 dark:border-white/20 hover:border-primary transition-colors group">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-2 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+<span class="material-icons-round">post_add</span>
+</div>
+<span class="text-sm font-medium">Manual Entry</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-dashed border-gray-300 dark:border-white/20 hover:border-accent-purple transition-colors group">
+<div class="w-10 h-10 rounded-full bg-accent-purple/10 flex items-center justify-center mb-2 group-hover:bg-accent-purple group-hover:text-white transition-colors text-accent-purple">
+<span class="material-icons-round">auto_awesome</span>
+</div>
+<span class="text-sm font-medium">AI Detect</span>
+</button>
+</div>
+<section class="space-y-4">
+<div class="flex justify-between items-end px-1">
+<h3 class="text-lg font-semibold">Active Loans</h3>
+<button class="text-xs text-primary font-medium hover:underline">View All</button>
+</div>
+<div class="group relative overflow-hidden rounded-2xl bg-surface-light dark:bg-surface-dark p-5 border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-soft-dark transition-all duration-300">
+<div class="absolute right-0 top-0 w-24 h-24 bg-gradient-to-bl from-accent-blue/10 to-transparent rounded-bl-full pointer-events-none"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-accent-blue/10 flex items-center justify-center text-accent-blue">
+<span class="material-icons-round">home</span>
+</div>
+<div>
+<h4 class="font-semibold text-base leading-tight">Home Loan</h4>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Citibank • Ends 2045</span>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-bold text-lg">$1,850</span>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">/ month</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 py-3 border-t border-b border-gray-100 dark:border-white/5 mb-3">
+<div>
+<p class="text-[10px] uppercase text-text-secondary-light dark:text-text-secondary-dark font-medium tracking-wide">Interest</p>
+<p class="text-sm font-semibold">3.5%</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-text-secondary-light dark:text-text-secondary-dark font-medium tracking-wide">Remaining</p>
+<p class="text-sm font-semibold">21 yrs</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] uppercase text-text-secondary-light dark:text-text-secondary-dark font-medium tracking-wide">Next Due</p>
+<p class="text-sm font-semibold text-accent-blue">Oct 05</p>
+</div>
+</div>
+<div class="w-full bg-gray-100 dark:bg-black/30 rounded-full h-1.5 overflow-hidden">
+<div class="bg-accent-blue h-full rounded-full" style="width: 15%"></div>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-2xl bg-surface-light dark:bg-surface-dark p-5 border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-soft-dark transition-all duration-300">
+<div class="absolute right-0 top-0 w-24 h-24 bg-gradient-to-bl from-accent-purple/10 to-transparent rounded-bl-full pointer-events-none"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-accent-purple/10 flex items-center justify-center text-accent-purple">
+<span class="material-icons-round">directions_car</span>
+</div>
+<div>
+<h4 class="font-semibold text-base leading-tight">Tesla Model 3</h4>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Tesla Finance • Ends 2026</span>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-bold text-lg">$600</span>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">/ month</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 py-3 border-t border-b border-gray-100 dark:border-white/5 mb-3">
+<div>
+<p class="text-[10px] uppercase text-text-secondary-light dark:text-text-secondary-dark font-medium tracking-wide">Interest</p>
+<p class="text-sm font-semibold">4.2%</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-text-secondary-light dark:text-text-secondary-dark font-medium tracking-wide">Remaining</p>
+<p class="text-sm font-semibold">3 yrs</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] uppercase text-text-secondary-light dark:text-text-secondary-dark font-medium tracking-wide">Next Due</p>
+<p class="text-sm font-semibold text-accent-purple">Oct 12</p>
+</div>
+</div>
+<div class="w-full bg-gray-100 dark:bg-black/30 rounded-full h-1.5 overflow-hidden">
+<div class="bg-accent-purple h-full rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-2xl bg-surface-light dark:bg-surface-dark p-5 border border-gray-100 dark:border-white/5 shadow-sm opacity-80">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gray-100 dark:bg-white/5 flex items-center justify-center text-text-secondary-light dark:text-text-secondary-dark">
+<span class="material-icons-round">school</span>
+</div>
+<div>
+<h4 class="font-semibold text-base leading-tight">Student Loan</h4>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Navient • Paid off</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-accent-green bg-accent-green/10 px-2 py-1 rounded-md">
+<span class="material-icons-round text-sm">check_circle</span>
+<span class="text-xs font-bold">Closed</span>
+</div>
+</div>
+<div class="w-full bg-gray-100 dark:bg-black/30 rounded-full h-1.5 overflow-hidden">
+<div class="bg-accent-green h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 w-full max-w-md bg-surface-light dark:bg-surface-dark/95 backdrop-blur-xl border-t border-gray-200 dark:border-white/10 px-6 py-4 pb-8 z-30">
+<div class="flex justify-between items-center text-text-secondary-light dark:text-text-secondary-dark">
+<button class="flex flex-col items-center gap-1 hover:text-primary transition-colors">
+<span class="material-icons-round text-2xl">grid_view</span>
+<span class="text-[10px] font-medium">Dashboard</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons-round text-2xl">account_balance_wallet</span>
+<span class="text-[10px] font-medium">Loans</span>
+</button>
+<button class="flex items-center justify-center -mt-8 w-14 h-14 rounded-full bg-primary shadow-glow text-white transition-transform hover:scale-105 active:scale-95">
+<span class="material-icons-round text-3xl">qr_code_scanner</span>
+</button>
+<button class="flex flex-col items-center gap-1 hover:text-primary transition-colors">
+<span class="material-icons-round text-2xl">insights</span>
+<span class="text-[10px] font-medium">Stats</span>
+</button>
+<button class="flex flex-col items-center gap-1 hover:text-primary transition-colors">
+<span class="material-icons-round text-2xl">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</nav>
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden max-w-md mx-auto">
+<div class="absolute top-[20%] right-[-20%] w-[300px] h-[300px] rounded-full bg-primary/5 dark:bg-primary/10 blur-[80px]"></div>
+<div class="absolute bottom-[20%] left-[-10%] w-[250px] h-[250px] rounded-full bg-accent-purple/5 dark:bg-accent-purple/10 blur-[60px]"></div>
+</div>
+</div>
+<script>
+        // Simple script to toggle dark mode for demonstration if needed, 
+        // though the prompt implies system preference or class based.
+        // Tailwind config is set to 'class', so we need to add 'dark' to html or rely on OS.
+        // For this preview, let's force dark mode if the user's OS prefers it, or default to dark as per "dark theme" request in prompt.
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        } else {
+             // Defaulting to dark as requested "calm, and follow a dark theme" in the prompt text, 
+             // but keeping the structure dual-mode ready.
+             document.documentElement.classList.add('dark');
+        }
+    </script>
+
+</body></html>

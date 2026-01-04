@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Emergency Fund</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        // The primary accent color (Lime Green)
+                        primary: "#D4E157", 
+                        // Dark Mode Palette (Deeper Dark)
+                        "background-dark": "#0F1115",      // Main deep background
+                        "surface-dark": "#181A1F",         // Card background
+                        "surface-highlight-dark": "#23262D", // Slightly lighter for interactive elements
+                        // Light Mode Palette (Clean & Soft)
+                        "background-light": "#F3F4F6",     // Light gray background
+                        "surface-light": "#FFFFFF",        // White cards
+                        "surface-highlight-light": "#F9FAFB",
+                        // Semantic Colors
+                        "success-light": "#DCFCE7",
+                        "success-text-light": "#166534",
+                        "success-dark": "#D4E157", // Using primary for success/healthy in dark mode to match screenshot
+                        "success-bg-dark": "rgba(212, 225, 87, 0.2)",
+                        // Icon Specific Backgrounds
+                        "icon-blue": "#1E293B",
+                        "icon-orange": "#2D2018",
+                        "icon-purple": "#251D29",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                        '3xl': '2rem',
+                    },
+                    boxShadow: {
+                        'glow': '0 0 15px rgba(212, 225, 87, 0.15)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }body {
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 font-sans h-screen flex flex-col overflow-hidden transition-colors duration-200">
+<header class="flex-none px-6 pt-12 pb-4 flex items-center justify-between z-10">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-light dark:bg-surface-highlight-dark text-gray-600 dark:text-gray-300 shadow-sm">
+<span class="material-icons-round text-xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-semibold tracking-wide">Emergency Fund</h1>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-light dark:bg-surface-highlight-dark text-gray-600 dark:text-gray-300 shadow-sm">
+<span class="material-icons-round text-xl">more_horiz</span>
+</button>
+</header>
+<main class="flex-1 overflow-y-auto px-6 pb-24 space-y-6">
+<section class="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex justify-between items-start mb-2">
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium">Current Balance</span>
+<span class="bg-green-100 text-green-700 dark:bg-success-bg-dark dark:text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Healthy</span>
+</div>
+<div class="text-4xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight">$8,450.00</div>
+<div class="flex justify-between items-end mb-2">
+<span class="bg-surface-highlight-light dark:bg-surface-highlight-dark text-gray-600 dark:text-primary px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider">Progress</span>
+<span class="text-primary font-bold text-sm">72%</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 mb-4 overflow-hidden">
+<div class="bg-primary h-3 rounded-full shadow-glow" style="width: 72%"></div>
+</div>
+<div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 font-medium">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span>Current</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full border border-gray-500"></div>
+<span>Target: $11,700</span>
+</div>
+</div>
+</section>
+<section>
+<div class="flex justify-between items-end mb-4">
+<h2 class="text-lg font-semibold">Savings Strategy</h2>
+<span class="text-xs text-gray-400">Based on Freelance Income</span>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-surface-highlight-dark transition-colors">
+<span class="material-icons-round text-blue-400 mb-2 text-2xl">shield</span>
+<span class="text-sm font-medium mb-1">Conservative</span>
+<span class="text-xs text-gray-500">6 Months</span>
+</button>
+<button class="relative flex flex-col items-center justify-center p-4 rounded-2xl bg-surface-light dark:bg-surface-highlight-dark border-2 border-primary shadow-glow">
+<div class="absolute -top-3 bg-primary text-gray-900 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Recommended</div>
+<span class="material-icons-round text-primary mb-2 text-2xl">balance</span>
+<span class="text-sm font-bold text-gray-900 dark:text-white mb-1">Balanced</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">4 Months</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-surface-highlight-dark transition-colors">
+<span class="material-icons-round text-red-400 mb-2 text-2xl">rocket_launch</span>
+<span class="text-sm font-medium mb-1">Aggressive</span>
+<span class="text-xs text-gray-500">2 Months</span>
+</button>
+</div>
+</section>
+<section class="bg-gray-900/50 dark:bg-surface-dark/50 rounded-2xl p-5 border border-gray-200 dark:border-gray-800 relative overflow-hidden">
+<span class="material-icons-round absolute top-4 right-4 text-6xl text-gray-200 dark:text-gray-800 opacity-20">lightbulb</span>
+<div class="flex items-center gap-2 mb-3 relative z-10">
+<span class="material-icons-round text-primary text-sm">info</span>
+<h3 class="font-semibold text-sm text-white">Why 4 months?</h3>
+</div>
+<p class="text-sm text-gray-300 leading-relaxed mb-4 relative z-10">
+                Since your income fluctuates as a <span class="text-white font-medium">freelancer</span>, a 4-month buffer covers essentials during slower periods without locking away too much capital.
+            </p>
+<div class="text-primary text-sm font-mono relative z-10">
+                $2,925 <span class="text-gray-500">/ mo expenses</span>
+</div>
+</section>
+<section>
+<h2 class="text-lg font-semibold mb-4">Monthly Breakdown</h2>
+<div class="bg-surface-light dark:bg-surface-dark rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden divide-y divide-gray-100 dark:divide-gray-800">
+<div class="p-4 flex items-center justify-between group cursor-pointer hover:bg-gray-50 dark:hover:bg-surface-highlight-dark transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 flex items-center justify-center">
+<span class="material-icons-round text-xl">home</span>
+</div>
+<div>
+<div class="font-medium text-sm text-gray-900 dark:text-gray-200">Housing &amp; Bills</div>
+<div class="text-xs text-gray-500">Essential</div>
+</div>
+</div>
+<div class="font-semibold text-gray-900 dark:text-white">$1,450</div>
+</div>
+<div class="p-4 flex items-center justify-between group cursor-pointer hover:bg-gray-50 dark:hover:bg-surface-highlight-dark transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 flex items-center justify-center">
+<span class="material-icons-round text-xl">shopping_basket</span>
+</div>
+<div>
+<div class="font-medium text-sm text-gray-900 dark:text-gray-200">Groceries</div>
+<div class="text-xs text-gray-500">Variable</div>
+</div>
+</div>
+<div class="font-semibold text-gray-900 dark:text-white">$600</div>
+</div>
+<div class="p-4 flex items-center justify-between group cursor-pointer hover:bg-gray-50 dark:hover:bg-surface-highlight-dark transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 flex items-center justify-center">
+<span class="material-icons-round text-xl">directions_car</span>
+</div>
+<div>
+<div class="font-medium text-sm text-gray-900 dark:text-gray-200">Transport</div>
+<div class="text-xs text-gray-500">Essential</div>
+</div>
+</div>
+<div class="font-semibold text-gray-900 dark:text-white">$350</div>
+</div>
+</div>
+</section>
+<div class="h-8"></div>
+</main>
+<div class="absolute bottom-20 left-6 right-6 z-20">
+<button class="w-full bg-surface-dark dark:bg-surface-highlight-dark border border-primary text-primary font-semibold py-4 rounded-3xl shadow-lg flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+<span class="material-icons-round">add</span>
+            Add to Emergency Fund
+        </button>
+</div>
+<nav class="bg-surface-light dark:bg-surface-highlight-dark border-t border-gray-200 dark:border-gray-800 pt-3 pb-8 px-6 flex justify-between items-center z-30">
+<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors" href="#">
+<span class="material-icons-round text-2xl">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-icons-round text-2xl drop-shadow-[0_0_5px_rgba(212,225,87,0.5)]">savings</span>
+<span class="text-[10px] font-medium">Savings</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors" href="#">
+<span class="material-icons-round text-2xl">credit_card</span>
+<span class="text-[10px] font-medium">Cards</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors" href="#">
+<span class="material-icons-round text-2xl">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+<script>
+        // Force dark mode on load to match user preference in screenshot
+        document.documentElement.classList.add('dark');
+    </script>
+
+</body></html>

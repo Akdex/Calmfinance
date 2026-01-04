@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Provider Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#10b981", // Emerald green for a calm, finance-positive vibe
+                        "background-light": "#f2f2f7", // iOS Light Gray
+                        "background-dark": "#000000", // iOS Pure Black
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1c1c1e", // iOS Dark Gray Surface
+                        "surface-dark-2": "#2c2c2e",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                        '3xl': '2rem',
+                    },
+                },
+            },
+        };
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }@keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-sans antialiased min-h-screen flex justify-center overflow-hidden">
+<div class="w-full max-w-md h-full min-h-screen relative flex flex-col bg-background-light dark:bg-background-dark overflow-y-auto no-scrollbar pb-24">
+<div class="h-12 w-full shrink-0"></div>
+<header class="px-6 py-4 flex items-center justify-between sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<button class="p-2 -ml-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-rounded text-2xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-semibold tracking-tight">AI Settings</h1>
+<button class="text-primary font-medium text-sm">Save</button>
+</header>
+<main class="px-5 space-y-6">
+<div class="animate-fade-in relative overflow-hidden rounded-3xl p-6 bg-surface-light dark:bg-surface-dark shadow-sm border border-slate-200 dark:border-white/10">
+<div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-rounded text-primary text-3xl">psychology</span>
+<h2 class="text-xl font-bold">Bring Your Own Key</h2>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                        Enable advanced financial analysis by connecting your preferred AI providers.
+                    </p>
+<div class="flex items-start gap-3 bg-slate-100 dark:bg-white/5 p-3 rounded-xl">
+<span class="material-symbols-rounded text-yellow-500 text-lg mt-0.5">lightbulb</span>
+<div class="text-xs text-slate-500 dark:text-slate-400">
+<p class="font-semibold text-slate-700 dark:text-slate-200 mb-1">Using your own AI credits</p>
+                            Without keys, the app runs on basic logic with limited insights.
+                        </div>
+</div>
+</div>
+</div>
+<section class="animate-fade-in delay-100">
+<h3 class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-3 ml-2 uppercase tracking-wider">Provider Keys</h3>
+<div class="bg-surface-light dark:bg-surface-dark rounded-3xl overflow-hidden shadow-sm border border-slate-200 dark:border-white/10">
+<div class="p-4 border-b border-slate-100 dark:border-white/5 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-black/5 dark:bg-white/10 flex items-center justify-center">
+<img alt="OpenAI" class="w-5 h-5 dark:invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtyYpXp4N07bSuyoMJ6pCwLkhxfhbyMoT2aR10bKt8K39Gh_g77q_sq5JTz1vgrpPPdhn0kBo3PISKLRR-mc7h3nFor-fn_ArIHCWIbRhiUyNBSjyJ3f3vmfa1-M5mqyDbLlH-QhwfthEx3EFL_HTx7Conc41C2ClLePfVsrYzIfTrJ_NMAGiDrNVjcrmLW1dC71QQXdvi1dGHKYBzuQGdOMeb2uuHS77l_TUJsvgT0LCi8s-JBpWiXpozJodbJb3QWNqYrExdnQ"/>
+</div>
+<span class="font-medium">OpenAI (ChatGPT)</span>
+</div>
+<span class="text-xs font-medium text-emerald-500 bg-emerald-500/10 px-2 py-1 rounded-full">Connected</span>
+</div>
+<div class="relative">
+<input class="w-full bg-slate-100 dark:bg-black/20 border-none rounded-xl py-3 px-4 text-sm text-slate-600 dark:text-slate-300 placeholder-slate-400 focus:ring-2 focus:ring-primary/50" readonly="" type="password" value="sk-proj-1234567890"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-rounded text-sm">edit</span>
+</button>
+</div>
+</div>
+<div class="p-4 border-b border-slate-100 dark:border-white/5 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center">
+<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.0003 11.9673C19.2903 12.1623 16.9853 13.0648 15.0853 14.6748C13.1853 16.2848 12.1053 18.3998 11.8453 21.0198C11.5853 18.3998 10.5103 16.2898 8.62028 14.6898C6.73028 13.0898 4.43028 12.1923 1.72028 12.0023C4.43028 11.8123 6.72528 10.9123 8.60528 9.30232C10.4853 7.69232 11.5603 5.58732 11.8303 2.98732C12.1003 5.58732 13.1803 7.68732 15.0703 9.28732C16.9603 10.8873 19.2703 11.7798 22.0003 11.9673Z" fill="#4285F4"></path></svg>
+</div>
+<span class="font-medium">Google Gemini</span>
+</div>
+<button class="text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-white/5 px-3 py-1.5 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Add Key</button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+<span class="font-serif text-slate-800 dark:text-slate-200 font-bold">P</span>
+</div>
+<span class="font-medium">Perplexity AI</span>
+</div>
+<button class="text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-white/5 px-3 py-1.5 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Add Key</button>
+</div>
+</div>
+</div>
+</section>
+<section class="animate-fade-in delay-200 pb-8">
+<h3 class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-3 ml-2 uppercase tracking-wider">AI Task Routing</h3>
+<div class="bg-surface-light dark:bg-surface-dark rounded-3xl overflow-hidden shadow-sm border border-slate-200 dark:border-white/10">
+<div class="p-4 border-b border-slate-100 dark:border-white/5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-indigo-100 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400">
+<span class="material-symbols-rounded text-lg">receipt_long</span>
+</div>
+<div>
+<p class="text-sm font-medium">Extraction</p>
+<p class="text-[10px] text-slate-500">Receipt data parsing</p>
+</div>
+</div>
+<select class="bg-transparent text-sm font-medium text-slate-600 dark:text-slate-300 border-none focus:ring-0 cursor-pointer text-right pr-8">
+<option>ChatGPT-4o</option>
+<option>Gemini Pro</option>
+<option>Perplexity</option>
+</select>
+</div>
+<div class="p-4 border-b border-slate-100 dark:border-white/5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-pink-100 text-pink-600 dark:bg-pink-900/30 dark:text-pink-400">
+<span class="material-symbols-rounded text-lg">category</span>
+</div>
+<div>
+<p class="text-sm font-medium">Categorization</p>
+<p class="text-[10px] text-slate-500">Tag transactions</p>
+</div>
+</div>
+<select class="bg-transparent text-sm font-medium text-slate-600 dark:text-slate-300 border-none focus:ring-0 cursor-pointer text-right pr-8">
+<option>Gemini Flash</option>
+<option>ChatGPT-3.5</option>
+</select>
+</div>
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-teal-100 text-teal-600 dark:bg-teal-900/30 dark:text-teal-400">
+<span class="material-symbols-rounded text-lg">insights</span>
+</div>
+<div>
+<p class="text-sm font-medium">Insights</p>
+<p class="text-[10px] text-slate-500">Monthly summaries</p>
+</div>
+</div>
+<select class="bg-transparent text-sm font-medium text-slate-600 dark:text-slate-300 border-none focus:ring-0 cursor-pointer text-right pr-8">
+<option>ChatGPT-4o</option>
+<option>Perplexity Pro</option>
+</select>
+</div>
+</div>
+<p class="mt-3 text-xs text-center text-slate-400 dark:text-slate-500 px-4">
+                    Extraction and categorization work best with faster models. Insights require more reasoning capabilities.
+                </p>
+</section>
+</main>
+<nav class="fixed bottom-0 w-full max-w-md bg-white/80 dark:bg-[#0a0a0a]/90 backdrop-blur-xl border-t border-slate-200 dark:border-white/5 pb-6 pt-2 px-6 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-rounded text-2xl">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-rounded text-2xl">payments</span>
+<span class="text-[10px] font-medium">Payment</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-rounded text-2xl">chat_bubble</span>
+<span class="text-[10px] font-medium">Message</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-primary">
+<span class="material-symbols-rounded text-2xl">more_horiz</span>
+<span class="text-[10px] font-medium">More</span>
+</button>
+</nav>
+</div>
+
+</body></html>

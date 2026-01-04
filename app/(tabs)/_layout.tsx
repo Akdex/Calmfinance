@@ -1,33 +1,61 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import { Tabs } from "expo-router";
+import { Banknote, Home, Landmark, TrendingUp } from "lucide-react-native";
+import React from "react";
+import { Platform } from "react-native";
 
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import { HapticTab } from "@/components/haptic-tab";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: "#D4FF9D", // Primary Lime
+        tabBarInactiveTintColor: "#6B7280", // Gray 500
         headerShown: false,
         tabBarButton: HapticTab,
-      }}>
+        tabBarStyle: Platform.select({
+          ios: {
+            position: "absolute",
+            backgroundColor: "rgba(23, 23, 23, 0.9)", // surface-dark with opacity
+            borderTopWidth: 0,
+            elevation: 0,
+            height: 80,
+            paddingBottom: 20,
+            // Blur effect is usually handled by native-blur-view or layout
+          },
+          default: {
+            backgroundColor: "#161616",
+            borderTopColor: "#27272a",
+          },
+        }),
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: "Home",
+          tabBarIcon: ({ color }) => <Home size={24} color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="expenses"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: "Expenses",
+          tabBarIcon: ({ color }) => <Banknote size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="loans"
+        options={{
+          title: "Loans",
+          tabBarIcon: ({ color }) => <Landmark size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="savings"
+        options={{
+          title: "Invest",
+          tabBarIcon: ({ color }) => <TrendingUp size={24} color={color} />,
         }}
       />
     </Tabs>
