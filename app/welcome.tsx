@@ -32,7 +32,7 @@ export default function WelcomeScreen() {
       {/* Hero Section - 45vh */}
       <View className="h-[45vh] w-full relative">
         <ImageBackground
-          source={require("@/assets/images/welcome-plant.png")}
+          source={require("../assets/images/welcome-plant.png")}
           className="w-full h-full"
           resizeMode="cover"
         >
@@ -112,14 +112,7 @@ export default function WelcomeScreen() {
             <ArrowRight size={22} color="#000" strokeWidth={2.5} />
           </TouchableOpacity>
 
-          <TouchableOpacity
-            onPress={handleStart}
-            className="w-full py-2 items-center"
-          >
-            <Body className="text-gray-400 font-medium text-sm">
-              I already have an account
-            </Body>
-          </TouchableOpacity>
+         
         </View>
       </View>
     </View>

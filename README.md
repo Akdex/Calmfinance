@@ -1,50 +1,131 @@
-# Welcome to your Expo app 👋
+<div align="center">
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+  <h1>myfinance 💰</h1>
+  
+  <p>
+    <strong>Your Personal Command Center for Financial Freedom</strong>
+  </p>
 
-## Get started
+  <p>
+    <a href="https://expo.dev">
+      <img src="https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white" alt="Expo" />
+    </a>
+    <a href="https://reactnative.dev">
+      <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native" />
+    </a>
+    <a href="https://www.typescriptlang.org/">
+      <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    </a>
+    <a href="https://tailwindcss.com/">
+      <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+    </a>
+  </p>
 
-1. Install dependencies
+  <p>
+    Create healthy financial habits, track every penny, and build your wealth with a beautiful, intuitive mobile experience.
+  </p>
 
-   ```bash
-   npm install
-   ```
+  <br />
 
-2. Start the app
+  <p>
+    <img src="assets/screenshots/onboarding.png" width="300" alt="Onboarding Screen" style="border-radius: 20px; margin-right: 20px;" />
+    <img src="assets/screenshots/dashboard.png" width="300" alt="Dashboard Screen" style="border-radius: 20px;" />
+  </p>
 
-   ```bash
-   npx expo start
-   ```
+</div>
 
-In the output, you'll find options to open the app in a
+<br />
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## ✨ Features
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Experience a new level of financial clarity.
 
-## Get a fresh project
+| Feature                     | Description                                                      |
+| :-------------------------- | :--------------------------------------------------------------- |
+| **📊 Smart Dashboard**      | A holistic view of your financial health at a glance.            |
+| **💸 Expense Tracking**     | Log and categorize daily expenses with zero friction.            |
+| **🏦 Loan Management**      | Keep track of your loans and stay on top of repayment schedules. |
+| **📈 Investment Portfolio** | Monitor your savings and watch your wealth grow.                 |
+| **🚨 Emergency Fund**       | Set goals and track your emergency fund status.                  |
+| **🛡️ Insurance Manager**    | Organize your insurance policies and never miss a premium.       |
+| **🔢 EMI Tracker**          | Calculate and monitor your monthly EMIs with precision.          |
 
-When you're ready, run:
+## 🛠 Tech Stack
+
+Built with the latest and greatest in mobile development.
+
+- **Framework**: [Expo](https://expo.dev) / React Native
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [NativeWind](https://www.nativewind.dev/) (Tailwind CSS)
+- **Routing**: [Expo Router](https://docs.expo.dev/router/introduction)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **Icons**: [Lucide React Native](https://lucide.dev/guide/packages/lucide-react-native)
+
+## 🚀 Getting Started
+
+Ready to take control?
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1.  **Clone the repository**
+
+    ```bash
+    git clone https://github.com/yourusername/myfinance.git
+    cd myfinance
+    ```
+
+2.  **Install dependencies**
+
+    ```bash
+    npm install
+    ```
+
+### Run the App
 
 ```bash
-npm run reset-project
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 📂 Project Structure
 
-## Learn more
+<details>
+<summary>Click to view project structure</summary>
 
-To learn more about developing your project with Expo, look at the following resources:
+```
+myfinance/
+├── app/                  # Expo Router file-based navigation
+│   ├── (tabs)/           # Tab navigation layout (Home, Expenses, Loans, Invest)
+│   ├── _layout.tsx       # Root layout configuration
+│   └── ...               # Other screens (Welcome, Modals)
+├── src/
+│   ├── components/       # Reusable UI components
+│   ├── constants/        # App-wide constants and theme colors
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions and libraries
+│   ├── store/            # Zustand state stores
+│   └── types/            # TypeScript type definitions
+├── assets/               # Images, fonts, and icons
+└── ...
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+</details>
 
-## Join the community
+## 📜 Scripts
 
-Join our community of developers creating universal apps.
+- `npm start`: Start the Expo development server.
+- `npm run android`: Run on Android.
+- `npm run ios`: Run on iOS.
+- `npm run web`: Run on Web.
+- `npm run reset-project`: Reset the project (use with caution).
+- `npm run lint`: Lint the codebase.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+<div align="center">
+  <p>Built with ❤️ by You</p>
+</div>
